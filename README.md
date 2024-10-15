@@ -1,2 +1,2 @@
 # Team-2-Project
- WIC Project Teams #2
+ WIC Project Team #2
