@@ -5,6 +5,7 @@
         <title> Weekend Activities! </title>
     </head>
     <body>
+        <button onclick = "window.location.href = 'index.html';"> Back to Home </button>
         <h1>Take this quiz to figure out how to have fun over the weekend! </h1>
         
         <div id="quiz">
@@ -13,14 +14,6 @@
                 <select id="campus">
                     <option value="on">On Campus</option>
                     <option value="off">Off Campus</option>
-                </select>
-            </div>
-
-            <div class="question">
-                <label for="transport"> Are you comfortable with taking public transportation? </label><br>
-                <select id="transport">
-                    <option value="yes">Yes</option>
-                    <option value="no">No</option>
                 </select>
             </div>
 
@@ -62,6 +55,22 @@
                     <option value="5plus">5+ hours</option>
                 </select>
             </div>
+
+            <div class="question">
+                <label for="transport"> Are you comfortable taking public transportation</label><br>
+                <select id="transport">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+
+            <div class="question">
+                <label for="food"> Is one of your priorities to eat good food this weekend? </label><br>
+                <select id="food">
+                    <option value="y">Yes!</option>
+                    <option value="n">Not that important</option>
+                </select>
+            </div>
             
             <button onclick = "getActivity()">Find my dream activity!</button>
         </div>
@@ -76,17 +85,22 @@
                     const budget = document.getElementById("budget").value;
                     const appealing = document.getElementById("appealing").value;
                     const length = document.getElementById("length").value;
+                    const food = document.getElementById("food").value;
 
-                    let activity=  ""
+                    let activity=  "";
 
-                    if(campus== "off" && transport == "yes" && budget == "0" && appealing == "shopping" && (length == "1-2"|| length == "3-4")){
-                        activity = "UTC!";
-                    }
-                    else if(campus== "off" && transport == "no" && appealing == "shopping" && (length == "1-2"|| length == "3-4")){
+                    
+                    if(campus== "off" && transport == "no" && appealing == "shopping" && (length == "1-2"|| length == "3-4") ){
                         activity = "Trader Joe's Trip!";
                     }
-                    else if(kind == "adventurous" && campus == "off" && transport == "yes" && budget == "30-45"){
+                    else if(kind == "relaxing" && transport == "yes" && budget == "1-15" && appealing == "nature" && length == "1-2" && food == "n"){
+                        activity = "San Diego Zoo!"
+                    }
+                    else if(kind == "adventurous" && campus == "off" && transport == "yes" && budget == "30-45" ){
                         activity = "Iceskating at UTC!";
+                    }
+                    else if(campus== "off" && transport == "yes"  && appealing == "shopping" && (length == "1-2"|| length == "3-4")){
+                        activity = "UTC!";
                     }
                     else if(kind == "adventurous" && campus == "off" && (budget=="15-30"|| budget == "30-45" || budget == "50+") && (appealing =="shopping"|| appealing == "nature" || appealing == "sights")&& (length == "3-4" || length == "5plus")){
                         activity = "La Jolla Cove!";
@@ -97,8 +111,14 @@
                     else if(kind == "relaxing" && campus == "off" && budget == "0" && (appealing == "nature" || appealing == "sights") & length == "1-2"){
                         activity = "Watching the sunset at Hang Gliders beach!";
                     }
-                    else if(kind == "relaxing" && campus == "on" && appealing == "in"){
+                    else if(kind == "relaxing" && campus == "off" && transport == "yes" && appealing == "shopping" && food=="yes"){
+                        activity = "Go to Little Italy in downtown San Diego";
+                    }
+                    else if(kind == "relaxing" && campus == "on" && appealing == "in" && food == "y"){
                         activity = "MOMS cafe!";
+                    }
+                    else if(kind == "relaxing" && campus == "on" && appealing == "in" && food == "n"){
+                        activity = "Take a nap!";
                     }
                     else if(campus == "on" && (appealing == "nature" || appealing == "sights")){
                         activity = " UCSD Scripps Pier!";
@@ -106,8 +126,14 @@
                     else if(campus == "off" && transport == "yes"  && appealing == "nature" &&(length == "1-2" || length == "3-4")){
                         activity = "Birch Aquarium";
                     }
+                    else if(campus == "on" && appealing == "shopping" && food == "y"){
+                        activity = "UCSD Farmers Market";
+                    }
                     else if(campus == "on" && appealing == "shopping"){
-                        activity = "UCSD Farmers Market"
+                        activity = "Target run!";
+                    }
+                    else if(campus == "off" && transport == "no"){
+                        activity = "Walk at Torrey Pines!";
                     }
                     else{
                         activity = "None of our activities matched! Here is a link to UCSD newsletter for more fun activities"
