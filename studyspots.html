@@ -10,6 +10,7 @@
     <form>
     <script>
         let quizComplete = false;
+        let question4Value = null;
         function disablePreviousQuestions() {
         const allQuestions = document.querySelectorAll('input[type="radio"]');
         allQuestions.forEach(question => {
@@ -59,7 +60,6 @@
             const question4Muir = document.getElementById('Muir').checked;
             const question4Warren = document.getElementById('Warren').checked;
             const question4Revelle = document.getElementById('Revelle').checked;
-            const question4Value = null;
             if(question4Marshall) {
                 question4Value = 'Marshall';
                 document.getElementById('question5').style.display = 'block';
