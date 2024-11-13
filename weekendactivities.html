@@ -1,0 +1,123 @@
+<!DOCTYPE html> 
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <title> Weekend Activities! </title>
+    </head>
+    <body>
+        <h1>Take this quiz to figure out how to have fun over the weekend! </h1>
+        
+        <div id="quiz">
+            <div class="question">
+                <label for="campus"> Would you rather stay on or off campus for your weekend activity? </label><br>
+                <select id="campus">
+                    <option value="on">On Campus</option>
+                    <option value="off">Off Campus</option>
+                </select>
+            </div>
+
+            <div class="question">
+                <label for="transport"> Are you comfortable with taking public transportation? </label><br>
+                <select id="transport">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+
+            <div class="question">
+                <label for="kind"> What kind of activity are you looking for this weekend? </label><br>
+                <select id="kind">
+                    <option value="adventurous">Adventurous</option>
+                    <option value="relaxing">Relaxing</option>
+                </select>
+            </div>
+
+            <div class="question">
+                <label for="budget"> What is your budget for your activity? </label><br>
+                <select id="budget">
+                    <option value="0">$0</option>
+                    <option value="1-15">$1-15</option>
+                    <option value="15-30">$15-30</option>
+                    <option value="30-45">$30-45</option>
+                    <option value="45-60">$45-60</option>
+                    <option value="60">$60+</option>
+                </select>
+            </div>
+
+            <div class="question">
+                <label for="appealing"> Which of the following sounds most appealing to you for this weekend?</label><br>
+                <select id="appealing">
+                    <option value="shopping">Shoppping</option>
+                    <option value="nature">Spending time in nature</option>
+                    <option value="sights">Sightseeting</option>
+                    <option value="in">Staying in</option>
+                </select>
+            </div>
+
+            <div class="question">
+                <label for="length"> How long do you want to spend on this activity? </label><br>
+                <select id="length">
+                    <option value="1-2">1-2 hours</option>
+                    <option value="3-4">3-4 hours</option>
+                    <option value="5plus">5+ hours</option>
+                </select>
+            </div>
+            
+            <button onclick = "getActivity()">Find my dream activity!</button>
+        </div>
+
+            <h2 id = "result"></h2>
+
+            <script>
+                function getActivity(){
+                    const campus = document.getElementById("campus").value;
+                    const transport = document.getElementById("transport").value;
+                    const kind = document.getElementById("kind").value;
+                    const budget = document.getElementById("budget").value;
+                    const appealing = document.getElementById("appealing").value;
+                    const length = document.getElementById("length").value;
+
+                    let activity=  ""
+
+                    if(campus== "off" && transport == "yes" && budget == "0" && appealing == "shopping" && (length == "1-2"|| length == "3-4")){
+                        activity = "UTC!";
+                    }
+                    else if(campus== "off" && transport == "no" && appealing == "shopping" && (length == "1-2"|| length == "3-4")){
+                        activity = "Trader Joe's Trip!";
+                    }
+                    else if(kind == "adventurous" && campus == "off" && transport == "yes" && budget == "30-45"){
+                        activity = "Iceskating at UTC!";
+                    }
+                    else if(kind == "adventurous" && campus == "off" && (budget=="15-30"|| budget == "30-45" || budget == "50+") && (appealing =="shopping"|| appealing == "nature" || appealing == "sights")&& (length == "3-4" || length == "5plus")){
+                        activity = "La Jolla Cove!";
+                    }
+                    else if(kind == "adventurous" && campus == "off" && (appealing == "nature" || appealing == "sights") && (length == "3-4") || length == "5plus"){
+                        activity = "Hiking Blacks Beach Trailhead!";
+                    }
+                    else if(kind == "relaxing" && campus == "off" && budget == "0" && (appealing == "nature" || appealing == "sights") & length == "1-2"){
+                        activity = "Watching the sunset at Hang Gliders beach!";
+                    }
+                    else if(kind == "relaxing" && campus == "on" && appealing == "in"){
+                        activity = "MOMS cafe!";
+                    }
+                    else if(campus == "on" && (appealing == "nature" || appealing == "sights")){
+                        activity = " UCSD Scripps Pier!";
+                    }
+                    else if(campus == "off" && transport == "yes"  && appealing == "nature" &&(length == "1-2" || length == "3-4")){
+                        activity = "Birch Aquarium";
+                    }
+                    else if(campus == "on" && appealing == "shopping"){
+                        activity = "UCSD Farmers Market"
+                    }
+                    else{
+                        activity = "None of our activities matched! Here is a link to UCSD newsletter for more fun activities"
+                    }
+                    
+                    document.getElementById("result").innerText = "Your perfect weekend activity is: " + activity;
+                    
+                }
+            </script>
+
+
+    </body>
+</html>
