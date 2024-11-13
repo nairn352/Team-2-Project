@@ -41,9 +41,11 @@
             if (question2Central) {
                 resultDiv.innerHTML = "Your study spot is: Geisel Library!";
                 quizComplete = true;
+                document.getElementById('refreshButton').style.display = 'block';
             } else if (question2Away) {
                 resultDiv.innerHTML = "Your study spot is: WongAvery Library!";
                 quizComplete = true;
+                document.getElementById('refreshButton').style.display = 'block';
             }
             const question3Yes = document.getElementById('closeYes').checked;
             const question3No = document.getElementById('closeNo').checked;
@@ -109,6 +111,7 @@
             if(question7Yes) {
                 resultDiv.innerHTML = "Your study spot is: Franklin Antonio Hall!";
                 quizComplete = true;
+                document.getElementById('refreshButton').style.display = 'block';
             } else if (question7No) {
                 document.getElementById('question9').style.display = 'block';
             }
@@ -119,9 +122,11 @@
             if(question8Yes) {
                 resultDiv.innerHTML = "Your study spot is: Galbraith Hall!";
                 quizComplete = true; 
+                document.getElementById('refreshButton').style.display = 'block';
             } else if (question8No) {
                 resultDiv.innerHTML = "Your study spot is: Angela's Space!";
                 quizComplete = true; 
+                document.getElementById('refreshButton').style.display = 'block';
             }
 
             const question9Yes = document.getElementById('caffeineYes').checked;
@@ -129,9 +134,11 @@
             if(question9Yes) {
                 resultDiv.innerHTML = "Your study spot is: M.O.M.'s Cafe!";
                 quizComplete = true;
+                document.getElementById('refreshButton').style.display = 'block';
             } else if (question9No) {
                 resultDiv.innerHTML = "Your study spot is: Franklin Antonio Hall!";
                 quizComplete = true;
+                document.getElementById('refreshButton').style.display = 'block';
             }
         }
     </script>
@@ -140,23 +147,23 @@
         <input type="radio" id="Library" name="question1" value="1" onclick="showNextQuestion()"> 
         <label for="library">Library</label><br>
         <input type="radio" id="Somewhere else" name="question1" value="0" onclick="showNextQuestion()">
-        <label for="somewhere else">Somewhere else</label><br><br>
+        <label for="somewhere else">Somewhere Else</label><br><br>
     </div>
 
     <div id="question2" style="display:none;">
         <label for="question2">Would you rather study somewhere central to campus or somewhere away from all the campus commotion?</label><br>
         <input type="radio" id="central to campus" name="question2" value="1" onclick="showNextQuestion()">
-        <label for="central to campus">central to campus</label><br>
+        <label for="central to campus">Central to Campus</label><br>
         <input type="radio" id="away from campus commotion" name="question2" value="0" onclick="showNextQuestion()">
-        <label for="away from campus commotion">away from campus commotion</label><br><br>
+        <label for="away from campus commotion">Away from Campus Commotion</label><br><br>
     </div>
 
     <div id="question3" style="display:none;">
         <label for="question3">Does your study spot need to be located close to your college?</label><br>
         <input type="radio" id="closeYes" name="question3" value="1" onclick="showNextQuestion()">
-        <label for="closeYes">close to college</label><br>
+        <label for="closeYes">Yes</label><br>
         <input type="radio" id="closeNo" name="question3" value="0" onclick="showNextQuestion()">
-        <label for="closeNo">not close</label><br><br>
+        <label for="closeNo">No</label><br><br>
     </div>
 
     <div id="question4" style="display:none;">
@@ -174,44 +181,45 @@
     <div id="question5" style="display:none;">
         <label for="question5">Would you rather have direct access to dining hall food or on-campus restaurant food at your study spot?</label><br>
         <input type="radio" id="dining hall" name="question5" value="1" onclick="showNextQuestion()">
-        <label for="dining hall">dining hall</label><br>
+        <label for="dining hall">Dining Hall</label><br>
         <input type="radio" id="on-campus restaurant" name="question5" value="0" onclick="showNextQuestion()">
-        <label for="on-campus restaurant">on-campus restaurant</label><br><br>
+        <label for="on-campus restaurant">On-Campus Restaurant</label><br><br>
     </div>
 
     <div id="question6" style="display:none;">
         <label for="question6">Will you be studying until late at night (past 9PM)?</label><br>
         <input type="radio" id="lateYes" name="question6" value="1" onclick="showNextQuestion()">
-        <label for="lateYes">yes</label><br>
+        <label for="lateYes">Yes</label><br>
         <input type="radio" id="lateNo" name="question6" value="0" onclick="showNextQuestion()">
-        <label for="lateNo">no</label><br><br>
+        <label for="lateNo">No</label><br><br>
     </div>
 
     <div id="question7" style="display:none;">
         <label for="question7">Is it essential that you have access to charging ports for your devices throughout your study session?</label><br>
         <input type="radio" id="chargingYes" name="question7" value="1" onclick="showNextQuestion()">
-        <label for="chargingYes">yes</label><br>
+        <label for="chargingYes">Yes</label><br>
         <input type="radio" id="chargingNo" name="question7" value="0" onclick="showNextQuestion()">
-        <label for="chargingNo">no</label><br><br>
+        <label for="chargingNo">No</label><br><br>
     </div>
 
     <div id="question8" style="display:none;">
         <label for="question8">Does it matter to you whether your study spot is aesthetically pleasing?</label><br>
         <input type="radio" id="aestheticYes" name="question8" value="1" onclick="showNextQuestion()">
-        <label for="aestheticYes">yes</label><br>
+        <label for="aestheticYes">Yes</label><br>
         <input type="radio" id="aestheticNo" name="question8" value="0" onclick="showNextQuestion()">
-        <label for="aestheticNo">no</label><br><br>
+        <label for="aestheticNo">No</label><br><br>
     </div>
 
     <div id="question9" style="display:none;">
         <label for="question9">Are you a caffeine fiend (you won't make it through your study session without a cup of coffee)?</label><br>
         <input type="radio" id="caffeineYes" name="question9" value="1" onclick="showNextQuestion()">
-        <label for="caffeineYes">yes</label><br>
+        <label for="caffeineYes">Yes</label><br>
         <input type="radio" id="caffeineNo" name="question9" value="0" onclick="showNextQuestion()">
-        <label for="caffeineNo">no</label><br><br>
+        <label for="caffeineNo">No</label><br><br>
     </div>
 
     <div id="result"></div>
+    <button onclick="location.reload();" style="display:none;" id="refreshButton">Refresh Quiz</button>
     </form>
     </section>
     </main>
