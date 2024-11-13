@@ -1,0 +1,218 @@
+<body>
+    <!-- Back button to return to the main page -->
+    <button onclick="window.location.href='index.html';">← Back to Home</button>
+    <!-- Main content of the Quiz page -->
+    <main>
+        <h1>Find the Study Spot For You!</h1>
+        <section>
+            <h2>Based on Your Preferences!</h2>
+            <p>Answer the following questions:</p>
+    <form>
+    <script>
+        let quizComplete = false;
+        function disablePreviousQuestions() {
+        const allQuestions = document.querySelectorAll('input[type="radio"]');
+        allQuestions.forEach(question => {
+            if (question.checked) {
+                question.disabled = true;
+            }
+            });
+        }
+        function showNextQuestion() {
+            if (quizComplete) {
+                return;
+            }
+            disablePreviousQuestions();
+            const question1Yes = document.getElementById('Library').checked;
+            const question1No = document.getElementById('Somewhere else').checked;
+
+            if (question1Yes) {
+                document.getElementById('question2').style.display = 'block';
+                document.getElementById('question3').style.display = 'none';
+            } else if (question1No) {
+                document.getElementById('question3').style.display = 'block';
+                document.getElementById('question2').style.display = 'none';
+            }
+            const question2Central = document.getElementById('central to campus').checked;
+            const question2Away = document.getElementById('away from campus commotion').checked;
+            const resultDiv = document.getElementById('result');
+
+            if (question2Central) {
+                resultDiv.innerHTML = "Your study spot is: Geisel Library!";
+                quizComplete = true;
+            } else if (question2Away) {
+                resultDiv.innerHTML = "Your study spot is: WongAvery Library!";
+                quizComplete = true;
+            }
+            const question3Yes = document.getElementById('closeYes').checked;
+            const question3No = document.getElementById('closeNo').checked;
+
+            if (question3Yes) {
+                document.getElementById('question4').style.display = 'block';
+                document.getElementById('question5').style.display = 'none';
+            } else if (question3No) {
+                document.getElementById('question5').style.display = 'block';
+                document.getElementById('question4').style.display = 'none';
+            }
+
+            const question4Marshall = document.getElementById('Marshall').checked;
+            const question4Muir = document.getElementById('Muir').checked;
+            const question4Warren = document.getElementById('Warren').checked;
+            const question4Revelle = document.getElementById('Revelle').checked;
+            const question4Value = null;
+            if(question4Marshall) {
+                question4Value = 'Marshall';
+                document.getElementById('question5').style.display = 'block';
+            } else if (question4Muir) {
+                question4Value = 'Muir';
+                document.getElementById('question5').style.display = 'block';    
+            } else if (question4Warren) {
+                question4Value = 'Warren';
+                document.getElementById('question5').style.display = 'block';
+            } else if (question4Revelle) {
+                question4Value = 'Revelle';
+                document.getElementById('question5').style.display = 'block';    
+            }
+
+            const question5Dining = document.getElementById('dining hall').checked;
+            const question5Restaurant = document.getElementById('on-campus restaurant').checked;
+            if(question5Dining) {
+                document.getElementById('question6').style.display = 'block';
+                document.getElementById('question7').style.display = 'none';
+            } else if (question5Restaurant) {
+                document.getElementById('question7').style.display = 'block';
+                document.getElementById('question6').style.display = 'none';
+            }
+
+            const question6Yes = document.getElementById('lateYes').checked;
+            const question6No = document.getElementById('lateNo').checked;
+            if(question6Yes) {
+                document.getElementById('question8').style.display = 'block';    
+            } else if (question6No) {
+                if (question4Value === 'Marshall') {
+                    resultDiv.innerHTML = "Your study spot is: Angela's Space!";
+                } else if (question4Value === 'Muir') {
+                    resultDiv.innerHTML = "Your study spot is: Roots Restaurant!";
+                } else if (question4Value === 'Warren') {
+                    resultDiv.innerHTML = "Your study spot is: Franklin Antonio Hall!";
+                } else if (question4Value === 'Revelle') {
+                    resultDiv.innerHTML = "Your study spot is: Galbraith Hall!";
+                } else if (question4Value == null){
+                    resultDiv.innerHTML = "Your study spot is: Angela's Space!";
+                }   
+                quizComplete = true;
+            }
+
+            const question7Yes = document.getElementById('chargingYes').checked;
+            const question7No = document.getElementById('chargingNo').checked;
+
+            if(question7Yes) {
+                resultDiv.innerHTML = "Your study spot is: Franklin Antonio Hall!";
+                quizComplete = true;
+            } else if (question7No) {
+                document.getElementById('question9').style.display = 'block';
+            }
+
+            const question8Yes = document.getElementById('aestheticYes').checked;
+            const question8No = document.getElementById('aestheticNo').checked;
+
+            if(question8Yes) {
+                resultDiv.innerHTML = "Your study spot is: Galbraith Hall!";
+                quizComplete = true; 
+            } else if (question8No) {
+                resultDiv.innerHTML = "Your study spot is: Angela's Space!";
+                quizComplete = true; 
+            }
+
+            const question9Yes = document.getElementById('caffeineYes').checked;
+            const question9No = document.getElementById('caffeineNo').checked;
+            if(question9Yes) {
+                resultDiv.innerHTML = "Your study spot is: M.O.M.'s Cafe!";
+                quizComplete = true;
+            } else if (question9No) {
+                resultDiv.innerHTML = "Your study spot is: Franklin Antonio Hall!";
+                quizComplete = true;
+            }
+        }
+    </script>
+    <div id="question1">
+        <label for="question1">Would you prefer studying at a library or studying somewhere else on campus?</label><br>
+        <input type="radio" id="Library" name="question1" value="1" onclick="showNextQuestion()"> 
+        <label for="library">Library</label><br>
+        <input type="radio" id="Somewhere else" name="question1" value="0" onclick="showNextQuestion()">
+        <label for="somewhere else">Somewhere else</label><br><br>
+    </div>
+
+    <div id="question2" style="display:none;">
+        <label for="question2">Would you rather study somewhere central to campus or somewhere away from all the campus commotion?</label><br>
+        <input type="radio" id="central to campus" name="question2" value="1" onclick="showNextQuestion()">
+        <label for="central to campus">central to campus</label><br>
+        <input type="radio" id="away from campus commotion" name="question2" value="0" onclick="showNextQuestion()">
+        <label for="away from campus commotion">away from campus commotion</label><br><br>
+    </div>
+
+    <div id="question3" style="display:none;">
+        <label for="question3">Does your study spot need to be located close to your college?</label><br>
+        <input type="radio" id="closeYes" name="question3" value="1" onclick="showNextQuestion()">
+        <label for="closeYes">close to college</label><br>
+        <input type="radio" id="closeNo" name="question3" value="0" onclick="showNextQuestion()">
+        <label for="closeNo">not close</label><br><br>
+    </div>
+
+    <div id="question4" style="display:none;">
+        <label for="question4">Do you live closer to Marshall, Muir, Warren, or Revelle College?</label><br>
+        <input type="radio" id="Marshall" name="question4" value="1" onclick="showNextQuestion()">
+        <label for="Marshall">Marshall</label><br>
+        <input type="radio" id="Muir" name="question4" value="2" onclick="showNextQuestion()">
+        <label for="Muir">Muir</label><br>
+        <input type="radio" id="Warren" name="question4" value="3" onclick="showNextQuestion()">
+        <label for="Warren">Warren</label><br>
+        <input type="radio" id="Revelle" name="question4" value="4" onclick="showNextQuestion()">
+        <label for="Revelle">Revelle</label><br><br>
+    </div>
+
+    <div id="question5" style="display:none;">
+        <label for="question5">Would you rather have direct access to dining hall food or on-campus restaurant food at your study spot?</label><br>
+        <input type="radio" id="dining hall" name="question5" value="1" onclick="showNextQuestion()">
+        <label for="dining hall">dining hall</label><br>
+        <input type="radio" id="on-campus restaurant" name="question5" value="0" onclick="showNextQuestion()">
+        <label for="on-campus restaurant">on-campus restaurant</label><br><br>
+    </div>
+
+    <div id="question6" style="display:none;">
+        <label for="question6">Will you be studying until late at night (past 9PM)?</label><br>
+        <input type="radio" id="lateYes" name="question6" value="1" onclick="showNextQuestion()">
+        <label for="lateYes">yes</label><br>
+        <input type="radio" id="lateNo" name="question6" value="0" onclick="showNextQuestion()">
+        <label for="lateNo">no</label><br><br>
+    </div>
+
+    <div id="question7" style="display:none;">
+        <label for="question7">Is it essential that you have access to charging ports for your devices throughout your study session?</label><br>
+        <input type="radio" id="chargingYes" name="question7" value="1" onclick="showNextQuestion()">
+        <label for="chargingYes">yes</label><br>
+        <input type="radio" id="chargingNo" name="question7" value="0" onclick="showNextQuestion()">
+        <label for="chargingNo">no</label><br><br>
+    </div>
+
+    <div id="question8" style="display:none;">
+        <label for="question8">Does it matter to you whether your study spot is aesthetically pleasing?</label><br>
+        <input type="radio" id="aestheticYes" name="question8" value="1" onclick="showNextQuestion()">
+        <label for="aestheticYes">yes</label><br>
+        <input type="radio" id="aestheticNo" name="question8" value="0" onclick="showNextQuestion()">
+        <label for="aestheticNo">no</label><br><br>
+    </div>
+
+    <div id="question9" style="display:none;">
+        <label for="question9">Are you a caffeine fiend (you won't make it through your study session without a cup of coffee)?</label><br>
+        <input type="radio" id="caffeineYes" name="question9" value="1" onclick="showNextQuestion()">
+        <label for="caffeineYes">yes</label><br>
+        <input type="radio" id="caffeineNo" name="question9" value="0" onclick="showNextQuestion()">
+        <label for="caffeineNo">no</label><br><br>
+    </div>
+
+    <div id="result"></div>
+    </form>
+    </section>
+    </main>
+</body>
