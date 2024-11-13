@@ -75,7 +75,7 @@
             <button onclick = "getActivity()">Find my dream activity!</button>
         </div>
 
-            <h2 id = "result"></h2>
+            <h2 id = result></h2>
 
             <script>
                 function getActivity(){
@@ -90,14 +90,14 @@
                     let activity=  "";
 
                     
-                    if(campus== "off" && transport == "no" && appealing == "shopping" && (length == "1-2"|| length == "3-4") ){
-                        activity = "Trader Joe's Trip!";
+                    if(campus== "off"  && appealing == "shopping" && (length == "1-2"|| length == "3-4") ){
+                        activity = "Trader Joe's Trip!  <a href = 'https://google.com'>Click here to find out more!</a>" ;
                     }
                     else if(kind == "relaxing" && transport == "yes" && budget == "1-15" && appealing == "nature" && length == "1-2" && food == "n"){
-                        activity = "San Diego Zoo!"
+                        activity = "San Diego Zoo  <a href = 'https://zoo.sandiegozoo.org/plan-your-visit'>Buy your tickets here!</a>";
                     }
                     else if(kind == "adventurous" && campus == "off" && transport == "yes" && budget == "30-45" ){
-                        activity = "Iceskating at UTC!";
+                        activity = "Iceskating at UTC! <a href = 'https://www.google.com/search?client=safari&rls=en&q=utc+iceskating&ie=UTF-8&oe=UTF-8'>Click here to find out more!</a> ";
                     }
                     else if(campus== "off" && transport == "yes"  && appealing == "shopping" && (length == "1-2"|| length == "3-4")){
                         activity = "UTC!";
@@ -105,10 +105,10 @@
                     else if(kind == "adventurous" && campus == "off" && (budget=="15-30"|| budget == "30-45" || budget == "50+") && (appealing =="shopping"|| appealing == "nature" || appealing == "sights")&& (length == "3-4" || length == "5plus")){
                         activity = "La Jolla Cove!";
                     }
-                    else if(kind == "adventurous" && campus == "off" && (appealing == "nature" || appealing == "sights") && (length == "3-4") || length == "5plus"){
+                    else if(kind == "adventurous" && campus == "off" && (appealing == "nature" || appealing == "sights") && (length == "3-4" || length == "5plus") && food == "n" ){
                         activity = "Hiking Blacks Beach Trailhead!";
                     }
-                    else if(kind == "relaxing" && campus == "off" && budget == "0" && (appealing == "nature" || appealing == "sights") & length == "1-2"){
+                    else if(kind == "relaxing" && campus == "off" && budget == "0" && (appealing == "nature") && length == "1-2"){
                         activity = "Watching the sunset at Hang Gliders beach!";
                     }
                     else if(kind == "relaxing" && campus == "off" && transport == "yes" && appealing == "shopping" && food=="yes"){
@@ -120,14 +120,20 @@
                     else if(kind == "relaxing" && campus == "on" && appealing == "in" && food == "n"){
                         activity = "Take a nap!";
                     }
+                    else if(campus == "on" && appealing == "shopping" && food == "y"){
+                        activity = "UCSD Farmers Market";
+                    }
+                    else if(campus == "off" && (appealing == "sights"|| appealing == "nature") && transport == "yes" && food == "y"){
+                        activity = "Bird Rock, La Jolla! "
+                    }
+                    else if(kind == "relaxing" && appealing == "sights" && campus == "off" && food == "n" ){
+                        activity = "See the bioluminescence at Torrey Pines Beach"
+                    }
                     else if(campus == "on" && (appealing == "nature" || appealing == "sights")){
                         activity = " UCSD Scripps Pier!";
                     }
                     else if(campus == "off" && transport == "yes"  && appealing == "nature" &&(length == "1-2" || length == "3-4")){
                         activity = "Birch Aquarium";
-                    }
-                    else if(campus == "on" && appealing == "shopping" && food == "y"){
-                        activity = "UCSD Farmers Market";
                     }
                     else if(campus == "on" && appealing == "shopping"){
                         activity = "Target run!";
@@ -139,7 +145,7 @@
                         activity = "None of our activities matched! Here is a link to UCSD newsletter for more fun activities"
                     }
                     
-                    document.getElementById("result").innerText = "Your perfect weekend activity is: " + activity;
+                    document.getElementById("result").innerHTML = "Your perfect weekend activity is: " + activity;
                     
                 }
             </script>
