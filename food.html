@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">:
-    <html>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,54 +12,42 @@
         <!-- Back Button to Return to the Main Page-->
         <button onclick = "window.location.href = 'index.html';"> Back to Home </button>
         <!-- Main content of the Quiz Page-->
-        <main>
-            <h1> Preferences quiz </h1>
-            <section>
-                <h2> Choose your preferences! </h2>
-                <div id = "quiz">
-                    <div class = 'question1'>
-                        <label for = 'question1'> 1. What meal do you want? </label>
-                        <select id = 'question1'>
-                            <option value = 'breakfast'> Breakfast</option>
-                            <option value = 'lunch/dinner'> Lunch/Dinner </option>
-                            <option value = 'snack'> Snack</option>
-                        </select>
+        <h2> Choose your preferences! </h2>
+        <div id = "quiz">
+            <div class = 'question1'>
+                <label for = 'question1'> 1. What meal do you want? </label>
+                <select id = 'question1'>
+                    <option value = 'breakfast'> Breakfast</option>
+                    <option value = 'lunch/dinner'> Lunch/Dinner </option>
+                    <option value = 'snack'> Snack</option>
+                </select>
+            </div>
 
-                    </div>
+            <div class = 'question2'>
+                <label for = 'question2'> 2. Will you use Dining Dollars or Triton Cash</label>
+                <select id = 'question2'>
+                    <option value = 'diningdollars'> Dining Dollars </option>
+                    <option value = 'tritoncash'> Triton Cash</option>
+                </select>
+            </div>
 
-                    <div class = 'question2'>
-                        <label for = 'question2'> 2. Will you use Dining Dollars or Triton Cash</label>
-                        <select id = 'question2'>
-                            <option value = 'diningdollars'> Dining Dollars </option>
-                            <option value = 'tritoncash'> Triton Cash</option>
-                        </select>
-                    </div>
+            <div class = 'question3'>
+                <label for = 'question3'> What cuisine do you want? </label>
+                <select id = 'question3'>
+                    <option value = 'mexican'> Mexican</option>
+                    <option value = 'asian'> Asian </option>
+                    <option value = 'italian'> Italian </option>
+                    <option value = 'american' > American</option>
+                    <option value="other"> Other </option>
+                </select>
+            </div>
 
-                    <div class = 'question3'>
-                        <label for = 'question3'> What cuisine do you want? </label>
-                        <select id = 'question3'>
-                            <option value = 'mexican'>
-                                Mexican
-                            </option>
-                            <option value = 'asian'>
-                                Asian
-                            </option>
-                            <option value = 'italian'> Italian </option>
-                            <option value = 'american' > American</option>
-                            <option value="other"> Other </option>
-                        </select>
-                    </div>
+            <button onclick="getFoodSpot()">Get Results!</button>
 
-                    <button onclick="getFoodSpot()">Get Results!</button>
+        </div>
 
-                </div>
+            <h2 id = "result"></h2>
 
-        
-    
-                <button id="get-results" onclick="getFoodSpot()">Get Results!</button>
-            </section>
-        </main>
-        <h2 id = "result"></h2>
         <script>
             function getFoodSpot(){
                 const meal = document.getElementById('question1').value;
@@ -162,7 +149,7 @@
                     }
 
                 }
-                document.getElementById("result").innerText = "Your food recommendation(s): " + rec;
+                document.getElementById("result").innerHTML = "Your food recommendation(s): " + rec;
 
             }
         </script>
@@ -170,9 +157,8 @@
 
 
     </body>
-    </html>
 
-
+</html>
     
     
     
