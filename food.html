@@ -17,40 +17,47 @@
             <h1> Preferences quiz </h1>
             <section>
                 <h2> Choose your preferences! </h2>
-                <form>
-                    <label for = 'question1'> 1. What meal do you want? </label>
-                    <input type = 'radio' id = 'breakfast' name = 'question1' value = 'Breakfast'>
-                    <label for = 'breakfast'> Breakfast </label>
-                    <input type = 'radio' id = 'lunch' name = 'question1' value = 'Lunch'>
-                    <label for = 'lunch'> Lunch </label>
-                    <input type = 'radio' id = 'dinner' name = 'question1' value = 'Dinner'>
-                    <label for = 'dinner'> Dinner </label>
-                    <input type = 'radio' id = 'snack' name = 'question1' value = 'Snack'>
-                    <label for = 'snack'> Snack </label>
+                <div id = "quiz">
+                    <div class = 'question1'>
+                        <label for = 'question1'> 1. What meal do you want? </label>
+                        <select id = 'question1'>
+                            <option value = 'breakfast'> Breakfast</option>
+                            <option value = 'lunch/dinner'> Lunch/Dinner </option>
+                            <option value = 'snack'> Snack</option>
+                        </select>
 
-                    <label for = 'question2'> 2. Will you use Dining Dollars or Triton Cash? </label>
-                    <input type = 'radio' id = 'diningdollars' name = 'question2' value = 'Dining Dollars'>
-                    <label for = 'diningdollars'> Dining Dollars </label>
-                    <input type = 'radio' id = 'tritoncash' name = 'question2' value = 'Triton Cash'>
-                    <label for = 'tritoncash'> Triton Cash </label>
+                    </div>
 
-                    <label for = 'question3'> 3. What cuisine do you want?  </label>
-                    <input type = 'radio' id = 'mexican' name = 'question3' value = 'Mexican'>
-                    <label for = 'mexican'> Mexican </label>
-                    <input type = 'radio' id = 'asian' name = 'question3' value = 'Asian'>
-                    <label for = 'asian'> Asian </label>
-                    <input type = 'radio' id = 'italian' name = 'question3' value = 'Italian'>
-                    <label for = 'italian'> Italian </label>
-                    <input type = 'radio' id = 'american' name = 'question3' value = 'American'>
-                    <label for = 'american'> American </label>
-                    <input type = 'radio' id = 'other' name = 'question3' value = 'Other'>
-                    <label for = 'other'> Other </label>
+                    <div class = 'question2'>
+                        <label for = 'question2'> 2. Will you use Dining Dollars or Triton Cash</label>
+                        <select id = 'question2'>
+                            <option value = 'diningdollars'> Dining Dollars </option>
+                            <option value = 'tritoncash'> Triton Cash</option>
+                        </select>
+                    </div>
+
+                    <div class = 'question3'>
+                        <label for = 'question3'> What cuisine do you want? </label>
+                        <select id = 'question3'>
+                            <option value = 'mexican'>
+                                Mexican
+                            </option>
+                            <option value = 'asian'>
+                                Asian
+                            </option>
+                            <option value = 'italian'> Italian </option>
+                            <option value = 'american' > American</option>
+                            <option value="other"> Other </option>
+                        </select>
+                    </div>
+
+                    <button onclick="getFoodSpot()">Get Results!</button>
+
+                </div>
 
         
-                </form>
+    
                 <button id="get-results" onclick="getFoodSpot()">Get Results!</button>
-                <div class = 'result' id = 'result'> </div>
-
             </section>
         </main>
         <h2 id = "result"></h2>
