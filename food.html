@@ -43,13 +43,120 @@
                     <label for = 'italian'> Italian </label>
                     <input type = 'radio' id = 'american' name = 'question3' value = 'American'>
                     <label for = 'american'> American </label>
-                    <input type = 'radio' id = 'mediterranean/african' name = 'question3' value = 'Mediterranean/African'>
-                    <label for = 'mediterranean/african'> Mediterranean/African </label>
+                    <input type = 'radio' id = 'other' name = 'question3' value = 'Other'>
+                    <label for = 'other'> Other </label>
+
+                    <button onclick = "getFoodSpot()"> Get my recommendation! </button>
         
                 </form>
             </section>
         </main>
-        <script src = 'script.js'></script>
+        <h2 id = "result"></h2>
+        <script>
+            function getFoodSpot(){
+                const meal = document.getElementById('question1').value;
+                const payment = document.getElementById('question2').value;
+                const cuisine = document.getElementById('question3').value;
+                let rec = ""
+
+                if(payment == "diningdollars"){
+                    if(meal == 'breakfast'){
+                        if(cuisine == 'mexican'){
+                            rec = "Taqueria at 64 Degrees"
+                            
+                        }
+                        else if(cuisine == 'asian'){
+                            rec = "No Asian breakfast places that take dining dollars. Sorry!"
+
+                        }
+                        else if(cuisine == 'italian'){
+                            rec = "No Italian breakfast places that take dining dollars. Sorry!"
+
+                        }
+                        else if(cuisine == 'american'){
+                            rec = ["Canyon Vista: Earl's Coffeehouse, Fresh, Fusion Grill", "64 Degrees: Triton Grill", "Club Med", "Foodworx", "Oceanview: Counter Culture", "Pines: Pines, Toasted, TritonGrill", "Ventanas: Kaldi, Soul", "Seventh: Seventh Coffeehouse, Northside Deli", "More: Audrey's Cafe, Sixth Coffeehouse, John's Market, Roger's Coffeehouse"]
+
+                        }
+                        else{
+                            rec = "No other breakfast places that take dining dollars. Sorry!"
+
+                        }
+
+                    }
+                    if(meal == 'lunch' | meal == 'dinner'){
+                        if(cuisine == 'mexican'){
+                            rec = ['64 Degrees: Taqueria', 'Sixth College: Wolftown']
+
+                        }
+                        else if(cuisine == 'asian'){
+                            rec = ['64 Degrees: Umi, Wok', 'Canyon Vista: Three Sixty', 'Pines: hEAT', 'Sixth: Makai, Noodles', 'Ventanas: Tandoor', 'Seventh: Bistro' ]
+
+                        }
+                        else if(cuisine == 'italian'){
+                            rec = ['64 Degrees: Al Dente', "OceanView: Scholar's Italian, Scholar's Pizza"]
+
+                        }
+                        else if(cuisine == 'american'){
+                            rec = ['64 degrees: Market 64, TritonGrill', 'Canyon Vista: Fresh, Fusion Grill', 'Club Med', 'Foodworx', "Pines: Farmer's market, Pines, Toasted, TritonGrill", "Sixth: Crave, Rooftop", "Ventanas: HaPi, Soul", "Seventh: Northside Deli", "Other: Roots"]
+                            
+                        }
+                        else{
+                            rec = ['OceanView: Spice', "Ventanas: Journey, Vibe"]
+
+                        }
+
+                    }
+                    if(meal == 'snack'){
+                        rec = ["Club Med", "Foodworx", "Ventanas: HaPi, Kaldi", "Other: Seventh Coffeehouse, Audrey's Cafe, Sixth Coffeehouse, John's Market, Roger's Coffeehouse"]
+
+                    }
+    
+                }
+                if(payment == 'tritoncash'){
+                    if(meal == 'breakfast'){
+                        if(cuisine == 'mexican' | cuisine == 'italian' | cuisine == 'asian' | cuisine == 'other'){
+                            rec = "No breakfast spots that match your cuisine. Try one of UCSD's dining halls instead!"
+
+                        }
+                        else{
+                            rec = ["Art of Espresso Cafe", "Copa Vida", "Crafted @ Minerva's Cafe", "Cup's Coffee", "Mom's Cafe", "Muir Woods", "Starbucks"]
+
+                        }
+                    }
+                    if(meal == 'lunch' | meal == 'dinner'){
+                        if(cuisine == "italian"){
+                            rec = "No Italian food spots. Try one of UCSD's dining halls instead!"
+                        }
+                        else if(cuisine == "mexican"){
+                            rec = "Taco Villa"
+                        }
+                        else if(cuisine == 'asian'){
+                            rec = ['Blue Pepper Asian Cuisine', "Curry Up Now", "Fan Fan", "Lemongrass Farm Fresh Plates", "Panda Express", "Showa Ramen"]
+                        }
+                        else if(cuisine == 'other'){
+                            rec = "Santorini Island & Grill"
+                        }
+                        else{
+                            rec = ['Burger King', "Crafted @ Minerva's Cafe", "Croutons", "Dirty Birds", "Flavorfull", "Plant Power Vegan Fast Food", "Ridge Walk Social", "Shores Diner", "Subway", "Zanzibar at the Loft"]
+                        }
+                    }
+                    if(meal == 'snack'){
+                        if(cuisine == "american"){
+                            rec = ["blue bowl", 'Yogurt World', 'Tec Cafe', 'Shake Smart', "Starbucks", "Mom's Cafe", "Muir Woods", "Jamba Juice", "Cup's Coffee", "Crafted @ Minerva's Cafe", "Copa Vida", "Art of Espresso Cafe"]
+                        }
+                        else if(cuisine == 'asian'){
+                            rec = 'Tapioca Express'
+                        }
+                        else{
+                            "No snack places in your preferred cuisine. Sorry!"
+                        }
+                    }
+
+                }
+                document.getElementById("result").innerText = "Your food recommendation(s): " + rec;
+
+            }
+        </script>
 
 
 
