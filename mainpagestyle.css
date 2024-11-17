@@ -1,5 +1,25 @@
 body {
     background-color: lightblue;
+    /* Tooltip */
+/* Tag
+
+Keywords: label, chip, badge
+*/
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 8px;
+gap: 8px;
+
+position: relative;
+width: 235px;
+height: 32px;
+
+background: #2C2C2C;
+border-radius: 8px;
 }
 h1 {
     color:pink
