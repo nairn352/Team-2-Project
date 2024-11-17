@@ -22,3 +22,25 @@ h1 {
     transform: translate(-50%, -50%); /* Adjust to ensure exact centering */
 
 }
+
+.triton-title::before,
+.triton-title::after {
+    content: '';
+    position: absolute;
+    width: 50px; /* Adjust size as needed */
+    height: 50px; /* Adjust size as needed */
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.triton-title::before {
+    background-image: url("https://pngtree.com/freepng/cartoon-island-with-coconut-tree-palm-isolated-vector_5691722.html");
+    top: -30px; /* Adjust position as needed */
+    left: -30px; /* Adjust position as needed */
+}
+
+.triton-title::after {
+    background-image: url("https://pngtree.com/freepng/cartoon-island-with-coconut-tree-palm-isolated-vector_5691722.html");
+    bottom: -30px; /* Adjust position as needed */
+    right: -30px; /* Adjust position as needed */
+}
