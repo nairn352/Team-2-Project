@@ -9,7 +9,7 @@ h1 {
 
 .triton-title {
     background-color: #2C2C2C;
-    color: white;
+    color: rgb(250, 216, 21);
     padding: 20px;
     border-radius: 8px;
     text-align: center;   
@@ -20,4 +20,5 @@ h1 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); /* Adjust to ensure exact centering */
+
 }
