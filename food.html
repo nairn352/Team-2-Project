@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">:
-    <html>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,50 +12,152 @@
         <!-- Back Button to Return to the Main Page-->
         <button onclick = "window.location.href = 'index.html';"> Back to Home </button>
         <!-- Main content of the Quiz Page-->
-        <main>
-            <h1> Preferences quiz </h1>
-            <section>
-                <h2> Choose your preferences! </h2>
-                <form>
-                    <label for = 'question1'> 1. What meal do you want? </label>
-                    <input type = 'radio' id = 'breakfast' name = 'question1' value = 'Breakfast'>
-                    <label for = 'breakfast'> Breakfast </label>
-                    <input type = 'radio' id = 'lunch' name = 'question1' value = 'Lunch'>
-                    <label for = 'lunch'> Lunch </label>
-                    <input type = 'radio' id = 'dinner' name = 'question1' value = 'Dinner'>
-                    <label for = 'dinner'> Dinner </label>
-                    <input type = 'radio' id = 'snack' name = 'question1' value = 'Snack'>
-                    <label for = 'snack'> Snack </label>
+        <h2> Choose your preferences! </h2>
+        <div id = "quiz">
+            <div class = 'question'>
+                <label for = 'question1'> 1. What meal do you want? </label>
+                <select id = 'question1'>
+                    <option value = 'breakfast'> Breakfast</option>
+                    <option value = 'lunch/dinner'> Lunch/Dinner </option>
+                    <option value = 'snack'> Snack</option>
+                </select>
+            </div>
 
-                    <label for = 'question2'> 2. Will you use Dining Dollars or Triton Cash? </label>
-                    <input type = 'radio' id = 'diningdollars' name = 'question2' value = 'Dining Dollars'>
-                    <label for = 'diningdollars'> Dining Dollars </label>
-                    <input type = 'radio' id = 'tritoncash' name = 'question2' value = 'Triton Cash'>
-                    <label for = 'tritoncash'> Triton Cash </label>
+            <div class = 'question'>
+                <label for = 'question2'> 2. Will you use Dining Dollars or Triton Cash</label>
+                <select id = 'question2'>
+                    <option value = 'diningdollars'> Dining Dollars </option>
+                    <option value = 'tritoncash'> Triton Cash</option>
+                </select>
+            </div>
 
-                    <label for = 'question3'> 3. What cuisine do you want?  </label>
-                    <input type = 'radio' id = 'mexican' name = 'question3' value = 'Mexican'>
-                    <label for = 'mexican'> Mexican </label>
-                    <input type = 'radio' id = 'asian' name = 'question3' value = 'Asian'>
-                    <label for = 'asian'> Asian </label>
-                    <input type = 'radio' id = 'italian' name = 'question3' value = 'Italian'>
-                    <label for = 'italian'> Italian </label>
-                    <input type = 'radio' id = 'american' name = 'question3' value = 'American'>
-                    <label for = 'american'> American </label>
-                    <input type = 'radio' id = 'mediterranean/african' name = 'question3' value = 'Mediterranean/African'>
-                    <label for = 'mediterranean/african'> Mediterranean/African </label>
-        
-                </form>
-            </section>
-        </main>
-        <script src = 'script.js'></script>
+            <div class = 'question'>
+                <label for = 'question3'> What cuisine do you want? </label>
+                <select id = 'question3'>
+                    <option value = 'mexican'> Mexican</option>
+                    <option value = 'asian'> Asian </option>
+                    <option value = 'italian'> Italian </option>
+                    <option value = 'american' > American</option>
+                    <option value="other"> Other </option>
+                </select>
+            </div>
+
+            <button onclick="getFoodSpot()">Get Results!</button>
+        </div>
+
+            <h2 id = "result"></h2>
+
+            <script>
+                function getFoodSpot(){
+                    const meal = document.getElementById('question1').value;
+                    const payment = document.getElementById('question2').value;
+                    const cuisine = document.getElementById('question3').value;
+                    let rec = "";
+
+                    if(payment == "diningdollars"){
+                        if(meal == 'breakfast'){
+                            if(cuisine == 'mexican'){
+                                rec = "Taqueria at 64 Degrees";
+                            
+                            }
+                            else if(cuisine == 'asian'){
+                                rec = "No Asian breakfast places that take dining dollars. Sorry!";
+
+                            }
+                            else if(cuisine == 'italian'){
+                                rec = "No Italian breakfast places that take dining dollars. Sorry!";
+
+                            }
+                            else if(cuisine == 'american'){
+                                rec = "Canyon Vista: Earl's Coffeehouse, Fresh, Fusion Grill, 64 Degrees: Triton Grill, Club Med, Foodworx, Oceanview: Counter Culture, Pines: Pines, Toasted, TritonGrill, Ventanas: Kaldi, Soul, Seventh: Seventh Coffeehouse, Northside Deli, More: Audrey's Cafe, Sixth Coffeehouse, John's Market, Roger's Coffeehouse";
+
+                            }
+                            else{
+                                rec = "No other breakfast places that take dining dollars. Sorry!";
+
+                            }
+
+                        }
+                        if(meal == 'lunch/dinner'){
+                            if(cuisine == 'mexican'){
+                                rec = '64 Degrees: Taqueria, Sixth College: Wolftown';
+
+                            }
+                            else if(cuisine == 'asian'){
+                                rec = '64 Degrees: Umi, Wok, Canyon Vista: Three Sixty, Pines: hEAT, Sixth: Makai, Noodles, Ventanas: Tandoor, Seventh: Bistro';
+
+                            }
+                            else if(cuisine == 'italian'){
+                                rec = "64 Degrees: Al Dente, OceanView: Scholar's Italian, Scholar's Pizza";
+
+                            }
+                            else if(cuisine == 'american'){
+                                rec = "64 degrees: Market 64, TritonGrill, Canyon Vista: Fresh, Fusion Grill, Club Med, Foodworx, Pines: Farmer's market, Pines, Toasted, TritonGrill, Sixth: Crave, Rooftop, Ventanas: HaPi, Soul, Seventh: Northside Deli, Other: Roots"
+                            
+                            }
+                            else{
+                                rec = 'OceanView: Spice, Ventanas: Journey, Vibe'
+
+                            }
+
+                        }
+                        if(meal == 'snack'){
+                            rec = "Club Med, Foodworx, Ventanas: HaPi, Kaldi, Other: Seventh Coffeehouse, Audrey's Cafe, Sixth Coffeehouse, John's Market, Roger's Coffeehouse";
+
+                        }
+    
+                    }
+                    if(payment == 'tritoncash'){
+                        if(meal == 'breakfast'){
+                            if(cuisine == 'mexican' | cuisine == 'italian' | cuisine == 'asian' | cuisine == 'other'){
+                                rec = "No breakfast spots that match your cuisine. Try one of UCSD's dining halls instead!";
+
+                            }
+                            else{
+                                rec = "Art of Espresso Cafe, Copa Vida, Crafted @ Minerva's Cafe, Cup's Coffee, Mom's Cafe. Muir Woods, Starbucks"
+
+                            }
+                        }
+                        if(meal == 'lunch/dinner'){
+                            if(cuisine == "italian"){
+                                rec = "No Italian food spots. Try one of UCSD's dining halls instead!"
+                            }
+                            else if(cuisine == "mexican"){
+                                rec = "Taco Villa"
+                            }
+                            else if(cuisine == 'asian'){
+                                rec = 'Blue Pepper Asian Cuisine, Curry Up Now, Fan Fan, Lemongrass Farm Fresh Plates, Panda Express, Showa Ramen'
+                            }
+                            else if(cuisine == 'other'){
+                                rec = "Santorini Island & Grill"
+                            }
+                            else{
+                                rec = "Burger King, Crafted @ Minerva's Cafe, Croutons, Dirty Birds, Flavorfull, Plant Power Vegan Fast Food, Ridge Walk Social, Shores Diner, Subway, Zanzibar at the Loft"
+                            }
+                        }
+                        if(meal == 'snack'){
+                            if(cuisine == "american"){
+                                rec = "blue bowl, Yogurt World, Tec Cafe, Shake Smart, Starbucks, Mom's Cafe, Muir Woods, Jamba Juice, Cup's Coffee, Crafted @ Minerva's Cafe, Copa Vida, Art of Espresso Cafe"
+                            }
+                            else if(cuisine == 'asian'){
+                                rec = 'Tapioca Express'
+                            }
+                            else{
+                                "No snack places in your preferred cuisine. Sorry!"
+                            }
+                        }
+
+                    }
+                    document.getElementById("result").innerHTML = "Your food recommendation(s): " + rec;
+
+                }
+            </script>
 
 
 
     </body>
-    </html>
 
-
+</html>
     
     
     
