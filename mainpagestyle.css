@@ -1,6 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Pirata+One&display=swap');
 body {
     background-color: lightblue;
 }
+
 h1 {
-    color:pink
+    color:pink;
+}
+
+.triton-title {
+    background-color: #2C2C2C;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;   
+    font-family: 'Pirata One', cursive; 
+    letter-spacing: 5px; 
 }
