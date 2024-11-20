@@ -94,10 +94,10 @@
                     if(kind == "relaxing" && transport == "yes" && budget == "1-15" && appealing == "nature" && length == "1-2" && food == "n"){
                         activity = "San Diego Zoo  <a href = 'https://zoo.sandiegozoo.org/plan-your-visit'>Buy your tickets here!</a>";
                     }
-                    else if(kind == "adventurous" && campus == "off" && transport == "yes" && budget == "30-45" && appealing == "nature" ){
+                    else if(kind == "adventurous" && campus == "off" && transport == "yes" && budget == "30-45" && appealing == "sights" ){
                         activity = "Iceskating at UTC! <a href = 'https://www.google.com/search?client=safari&rls=en&q=utc+iceskating&ie=UTF-8&oe=UTF-8'>Click here to find out more!</a> ";
                     }
-                    else if(campus== "off" && transport == "yes"  && appealing == "shopping" && (length == "1-2"|| length == "3-4")&& food == "n"){
+                    else if(kind == "relaxing"&&campus== "off" && transport == "yes"  && appealing == "shopping" && (length == "1-2"|| length == "3-4")&& food == "y"){
                         activity = "UTC! <a href = 'https://www.westfield.com/united-states/utc'>UTC website!</a> ";
                     }
                     else if(kind == "adventurous" && campus == "off" && (appealing == "nature") && (length == "3-4" || length == "5plus") && food == "n" ){
@@ -106,7 +106,7 @@
                     else if(kind == "relaxing" && campus == "off" && budget == "0" && (appealing == "nature") && length == "1-2"){
                         activity = "Watching the sunset at Hang Gliders beach!<a href = 'https://www.google.com/maps/place/Torrey+Pines+Gliderport/@32.889867,-117.2537759,17z/data=!3m1!4b1!4m6!3m5!1s0x80dc0693080cb29b:0x8f244f06aa6472e0!8m2!3d32.889867!4d-117.251201!16s%2Fm%2F04gvgnd?entry=ttu&g_ep=EgoyMDI0MTExMy4xIKXMDSoJLDEwMjExMjMzSAFQAw%3D%3D'> Location</a>";
                     }
-                    else if(kind == "relaxing" && campus == "off" && transport == "yes" && appealing == "shopping" && food=="y" && (budget!= "0")){
+                    else if(kind == "adventurous" && campus == "off" && transport == "yes" && appealing == "shopping"){
                         activity = "Go to Little Italy in downtown San Diego <a href = 'https://www.sandiego.org/explore/downtown-urban/little-italy.aspx'> Little Italy Website!</a>";
                     }
                     else if(kind == "relaxing" && campus == "on" && appealing == "in" && food == "y"){
@@ -118,7 +118,7 @@
                     else if(campus == "on" && appealing == "shopping" && food == "y"){
                         activity = "UCSD Farmers Market <a href = 'https://amphitheater.ucsd.edu/about/farmers-market/'> Click here for more information!</a>";
                     }
-                    else if(campus == "off" && (appealing == "sights"|| appealing == "nature") && transport == "yes" && food == "y"){
+                    else if(campus == "off" && (appealing == "sights"|| appealing == "nature") && transport == "yes" && food == "y" && length == "3-4"){
                         activity = "Bird Rock, La Jolla! <a href = 'https://www.sandiego.org/campaigns/happiness-is-calling/bird-rock.aspx'> Click here to find out more!</a> "
                     }
                     else if(kind == "relaxing" && appealing == "sights" && campus == "off" && food == "n" ){
@@ -139,7 +139,7 @@
                     else if(campus == "on" && appealing == "shopping"){
                         activity = "Target run!";
                     }
-                    else if(campus == "off" && transport == "no"){
+                    else if(campus == "off" ){
                         activity = "Walk at Torrey Pines!";
                     }
                     else{
