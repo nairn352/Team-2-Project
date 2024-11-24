@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Pirata+One&display=swap');
+/* Apply light blue background to the entire page */
+body {
+    background-color: rgb(155, 184, 244);
+}
+.food-title {
+    text-align: center;  /* Centers the text horizontally */
+    margin-top: 0;       /* Removes default top margin */
+    padding-top: 20px;   /* Adds space at the top of the page */
+    font-size: 2.5em;    /* Makes the title stand out */
+    font-weight: bold;   /* Makes the title bold */
+    color: #333;         /* Sets the text color */
+    position: relative;  /* Ensures proper positioning */
+    font-family: 'Pirata One', cursive; 
+    letter-spacing: 5px;
+}
