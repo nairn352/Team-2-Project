@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Tillana:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
 body {
     position: relative;
     margin: 0;
@@ -15,8 +18,18 @@ body {
     font-weight: bold;   
     color: whitesmoke;    
     position: relative;  
-    font-family: 'Pirata One', cursive; 
+    font-family: 'Permanent Marker', cursive; 
     letter-spacing: 5px;
+}
+
+.second-heading {
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: normal;
+    color: whitesmoke;
+    font-family: 'Permanent Marker', cursive;
+    margin-top: 0; /* Remove top margin */
+    margin-bottom: 20px; /* Add some space below the heading */
 }
 
 body::before {
@@ -44,5 +57,29 @@ body::after {
     z-index: -1; 
 }
 
+.sticky-note {
+    border: 3px solid #800000; /* Dashed border */
+    padding: 10px; /* Space inside the box */
+    margin: 10px auto; /* Center the box and add space around it */
+    width: 80%; /* Adjust the box width */
+    background-color: #daf5c4; /* Light background color */
+    border-radius: 10px; /* Rounded corners */
+    font-family: 'Tillana', cursive; /* Font style */
+    position: relative; /* Needed for the pin pseudo-element */
+    transform: rotate(-2deg); /* Slight rotation for a realistic look */
+}
+
+.sticky-note::before {
+    content: '';
+    position: absolute;
+    top: -15px; /* Adjust position to place the pin on the top border */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px; /* Adjust size as needed */
+    height: 30px; /* Adjust size as needed */
+    /*background-image: url('pushpin.jpg'); Path to your pushpin image */
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 
 
