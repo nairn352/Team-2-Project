@@ -73,10 +73,11 @@
                 </select>
             </div>
             
-            <button class = "treasure-box" onclick = "getActivity()">Find my dream activity!</button>
+            <button class = "treasure-box" onclick = "getActivity()">My dream activity!</button>
+            <div id = "result"></div>
         </div>
 
-            <h2 id = result></h2>
+           
 
             <script>
                 function getActivity(){
@@ -93,7 +94,7 @@
                     
                     
                     if(kind == "relaxing" && transport == "yes" && budget == "1-15" && appealing == "nature" && length == "1-2" && food == "n"){
-                        activity = "San Diego Zoo  <a href = 'https://zoo.sandiegozoo.org/plan-your-visit'>Buy your tickets here!</a>";
+                        activity = "San Diego Zoo!  <a href = 'https://zoo.sandiegozoo.org/plan-your-visit'>Buy your tickets here!</a>";
                     }
                     else if(kind == "adventurous" && campus == "off" && transport == "yes" && budget == "30-45" && appealing == "sights" ){
                         activity = "Iceskating at UTC! <a href = 'https://www.google.com/search?client=safari&rls=en&q=utc+iceskating&ie=UTF-8&oe=UTF-8'>Click here to find out more!</a> ";
@@ -102,13 +103,13 @@
                         activity = "UTC! <a href = 'https://www.westfield.com/united-states/utc'>UTC website!</a> ";
                     }
                     else if(kind == "adventurous" && campus == "off" && (appealing == "nature") && (length == "3-4" || length == "5plus") && food == "n" ){
-                        activity = "Hiking Blacks Beach Trailhead <a href = 'https://www.alltrails.com/trail/us/california/blacks-beach-trail'> Click here to find out more!</a> ";
+                        activity = "Hiking Blacks Beach Trailhead! <a href = 'https://www.alltrails.com/trail/us/california/blacks-beach-trail'> Click here to find out more!</a> ";
                     }
                     else if(kind == "relaxing" && campus == "off" && budget == "0" && (appealing == "nature") && length == "1-2"){
                         activity = "Watching the sunset at Hang Gliders beach!<a href = 'https://www.google.com/maps/place/Torrey+Pines+Gliderport/@32.889867,-117.2537759,17z/data=!3m1!4b1!4m6!3m5!1s0x80dc0693080cb29b:0x8f244f06aa6472e0!8m2!3d32.889867!4d-117.251201!16s%2Fm%2F04gvgnd?entry=ttu&g_ep=EgoyMDI0MTExMy4xIKXMDSoJLDEwMjExMjMzSAFQAw%3D%3D'> Location</a>";
                     }
                     else if(kind == "adventurous" && campus == "off" && transport == "yes" && appealing == "shopping"){
-                        activity = "Go to Little Italy in downtown San Diego <a href = 'https://www.sandiego.org/explore/downtown-urban/little-italy.aspx'> Little Italy Website!</a>";
+                        activity = "Go to Little Italy in downtown San Diego! <a href = 'https://www.sandiego.org/explore/downtown-urban/little-italy.aspx'> Little Italy Website!</a>";
                     }
                     else if(kind == "relaxing" && campus == "on" && appealing == "in" && food == "y"){
                         activity = "MOMS cafe!";
@@ -117,16 +118,16 @@
                         activity = "Take a nap! <a href = 'https://www.mayoclinic.org/healthy-lifestyle/adult-health/in-depth/napping/art-20048319'> Click here to find out more!</a>";
                     }
                     else if(campus == "on" && appealing == "shopping" && food == "y"){
-                        activity = "UCSD Farmers Market <a href = 'https://amphitheater.ucsd.edu/about/farmers-market/'> Click here for more information!</a>";
+                        activity = "UCSD Farmers Market! <a href = 'https://amphitheater.ucsd.edu/about/farmers-market/'> Click here for more information!</a>";
                     }
                     else if(campus == "off" && (appealing == "sights"|| appealing == "nature") && transport == "yes" && food == "y" && length == "3-4"){
                         activity = "Bird Rock, La Jolla! <a href = 'https://www.sandiego.org/campaigns/happiness-is-calling/bird-rock.aspx'> Click here to find out more!</a> "
                     }
                     else if(kind == "relaxing" && appealing == "sights" && campus == "off" && food == "n" ){
-                        activity = "See the bioluminescence at Torrey Pines Beach <a href = 'https://www.parks.ca.gov/?page_id=658'> Click here to find out more about Torrey Pines!</a> <a href = 'https://www.visitcalifornia.com/experience/heres-how-experience-bioluminescence-california/'> Guide to watching!</a> "
+                        activity = "See the bioluminescence at Torrey Pines Beach! <a href = 'https://www.parks.ca.gov/?page_id=658'> Click here to find out more about Torrey Pines!</a> <a href = 'https://www.visitcalifornia.com/experience/heres-how-experience-bioluminescence-california/'> Guide to watching!</a> "
                     }
                     else if(campus == "off" && transport == "yes"  && appealing == "nature" &&(length == "1-2" || length == "3-4")){
-                        activity = "Birch Aquarium <a href = 'https://www.sandiego.org/members/attractions/birch-aquarium-at-scripps.aspx'> Click here to find out more!</a>";
+                        activity = "Birch Aquarium! <a href = 'https://www.sandiego.org/members/attractions/birch-aquarium-at-scripps.aspx'> Click here to find out more!</a>";
                     }
                     else if(kind == "adventurous" && campus == "off" && (budget=="15-30"|| budget == "30-45" || budget == "50+") && (appealing =="shopping"|| appealing == "nature" || appealing == "sights")&& (length == "3-4" || length == "5plus")&& food == "y"){
                         activity = "La Jolla Cove! <a href = 'https://www.google.com/maps/place/La+Jolla+Cove/@32.8504816,-117.275374,17z/data=!3m1!4b1!4m6!3m5!1s0x80dc03fea876e5eb:0x90ff653c28a7c617!8m2!3d32.8503895!4d-117.2729435!16s%2Fm%2F02pt3vb?entry=ttu&g_ep=EgoyMDI0MTExMy4xIKXMDSoJLDEwMjExMjMzSAFQAw%3D%3D'> La Jolla Cove Location</a> ";
@@ -147,7 +148,7 @@
                         activity = "None of our activities matched, so maybe just stay home! Here is a link to the UCSD events calendar for more up to date fun activities! <a href = 'https://universitycenters.ucsd.edu/arts-and-entertainment/events-calendar.html'> Events Calendar</a>"
                     }
                     
-                    document.getElementById("result").innerHTML = "Your perfect weekend activity is: " + activity;
+                    document.getElementById("result").innerHTML = "Your weekend plans are:  " + activity;
                     
                 }
             </script>

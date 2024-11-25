@@ -37,10 +37,22 @@ body {
     height: 115px;
     cursor: pointer;
     text-align: bottom;
-    text-align:center;
     font-weight: bold; 
     font-size: 16px; 
     font-family: 'Caveat', cursive;
-    color: rgb(20, 116, 3);
+    color: rgb(255, 255, 255);
+    text-shadow:
+    -1px -1px 0 black, /* Top-left */
+    1px -1px 0 black,  /* Top-right */
+    -1px 1px 0 black,  /* Bottom-left */
+    1px 1px 0 black;   /* Bottom-right */
 }
-
+#result{
+    background-color: #daf5c4;
+    width:500px;
+    width: 80%;
+    border-radius: 10px;
+    font-family: 'Caveat', cursive; 
+    font-size: 20px; 
+    
+}
