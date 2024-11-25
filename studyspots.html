@@ -10,7 +10,7 @@
         <title>Study Spots</title>
     </head>
     <main>
-        <h1>Find the Study Spot For You!</h1>
+        <h1 class = "study-spot-heading"> Find the Study Spot For You! </h1>
         <section>
             <p>Answer the following questions:</p>
     <form>
@@ -148,7 +148,7 @@
             }
         }
     </script>
-    <div id="question1">
+    <div id="question1" class="sticky-note">
         <label for="question1">Would you prefer studying at a library or studying somewhere else on campus?</label><br>
         <input type="radio" id="Library" name="question1" value="1" onclick="showNextQuestion()"> 
         <label for="library">Library</label><br>
@@ -156,7 +156,7 @@
         <label for="somewhere else">Somewhere Else</label><br><br>
     </div>
 
-    <div id="question2" style="display:none;">
+    <div id="question2" class="sticky-note" style="display:none;">
         <label for="question2">Would you rather study somewhere central to campus or somewhere away from all the campus commotion?</label><br>
         <input type="radio" id="central to campus" name="question2" value="1" onclick="showNextQuestion()">
         <label for="central to campus">Central to Campus</label><br>
@@ -164,7 +164,7 @@
         <label for="away from campus commotion">Away from Campus Commotion</label><br><br>
     </div>
 
-    <div id="question3" style="display:none;">
+    <div id="question3" class="sticky-note" style="display:none;">
         <label for="question3">Does your study spot need to be located close to your college?</label><br>
         <input type="radio" id="closeYes" name="question3" value="1" onclick="showNextQuestion()">
         <label for="closeYes">Yes</label><br>
@@ -172,7 +172,7 @@
         <label for="closeNo">No</label><br><br>
     </div>
 
-    <div id="question4" style="display:none;">
+    <div id="question4" class="sticky-note" style="display:none;">
         <label for="question4">Do you live closer to Marshall, Muir, Warren, or Revelle College?</label><br>
         <input type="radio" id="Marshall" name="question4" value="1" onclick="showNextQuestion()">
         <label for="Marshall">Marshall</label><br>
@@ -184,7 +184,7 @@
         <label for="Revelle">Revelle</label><br><br>
     </div>
 
-    <div id="question5" style="display:none;">
+    <div id="question5" class="sticky-note" style="display:none;">
         <label for="question5">Would you rather have direct access to dining hall food or on-campus restaurant food at your study spot?</label><br>
         <input type="radio" id="dining hall" name="question5" value="1" onclick="showNextQuestion()">
         <label for="dining hall">Dining Hall</label><br>
@@ -192,7 +192,7 @@
         <label for="on-campus restaurant">On-Campus Restaurant</label><br><br>
     </div>
 
-    <div id="question6" style="display:none;">
+    <div id="question6" class="sticky-note" style="display:none;">
         <label for="question6">Will you be studying until late at night (past 9PM)?</label><br>
         <input type="radio" id="lateYes" name="question6" value="1" onclick="showNextQuestion()">
         <label for="lateYes">Yes</label><br>
@@ -200,7 +200,7 @@
         <label for="lateNo">No</label><br><br>
     </div>
 
-    <div id="question7" style="display:none;">
+    <div id="question7" class="sticky-note" style="display:none;">
         <label for="question7">Is it essential that you have access to charging ports for your devices throughout your study session?</label><br>
         <input type="radio" id="chargingYes" name="question7" value="1" onclick="showNextQuestion()">
         <label for="chargingYes">Yes</label><br>
@@ -208,7 +208,7 @@
         <label for="chargingNo">No</label><br><br>
     </div>
 
-    <div id="question8" style="display:none;">
+    <div id="question8" class="sticky-note" style="display:none;">
         <label for="question8">Does it matter to you whether your study spot is aesthetically pleasing?</label><br>
         <input type="radio" id="aestheticYes" name="question8" value="1" onclick="showNextQuestion()">
         <label for="aestheticYes">Yes</label><br>
@@ -216,7 +216,7 @@
         <label for="aestheticNo">No</label><br><br>
     </div>
 
-    <div id="question9" style="display:none;">
+    <div id="question9" class="sticky-note" style="display:none;">
         <label for="question9">Are you a caffeine fiend (you won't make it through your study session without a cup of coffee)?</label><br>
         <input type="radio" id="caffeineYes" name="question9" value="1" onclick="showNextQuestion()">
         <label for="caffeineYes">Yes</label><br>
@@ -224,7 +224,7 @@
         <label for="caffeineNo">No</label><br><br>
     </div>
 
-    <div id="result"></div>
+    <div id="result" class="sticky-note"></div>
     <button onclick="location.reload();" style="display:none;" id="refreshButton">Refresh Quiz</button>
     </form>
     </section>
