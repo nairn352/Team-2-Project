@@ -1,7 +1,7 @@
 <body>
 
     <!-- Back button to return to the main page -->
-    <button onclick="window.location.href='index.html';">← Back to Home</button>
+    <button class="button" onclick="window.location.href='index.html';">← Back to Home</button>
     <!-- Main content of the Quiz page -->
     <head>
         <meta charset="UTF-8">
@@ -13,6 +13,7 @@
         <h1 class = "study-spot-heading"> Find the Study Spot For You! </h1>
         <section>
             <h2 class = "second-heading">Answer the following questions:</h2>
+            <p class="disclaimer">Disclaimer: Your adventure will be even more rewarding if you explore study spots beyond the libraries!</p>
     <form>
     <script>
         let quizComplete = false;
@@ -45,11 +46,11 @@
             const resultDiv = document.getElementById('result');
 
             if (question2Central) {
-                resultDiv.innerHTML = "Your study spot is: Geisel Library!";
+                resultDiv.innerHTML = 'Your study spot is: <a href="https://library.ucsd.edu/about/geisel-library-and-wongavery-library/geisel-library.html" target="_blank">Geisel Library</a>!';
                 quizComplete = true;
                 document.getElementById('refreshButton').style.display = 'block';
             } else if (question2Away) {
-                resultDiv.innerHTML = "Your study spot is: WongAvery Library!";
+                resultDiv.innerHTML = 'Your study spot is: <a href="https://library.ucsd.edu/about/geisel-library-and-wongavery-library/wongavery-library.html" target="_blank">WongAvery Library</a>!';
                 quizComplete = true;
                 document.getElementById('refreshButton').style.display = 'block';
             }
@@ -98,15 +99,15 @@
                 document.getElementById('question8').style.display = 'block';    
             } else if (question6No) {
                 if (question4Value === 'Marshall') {
-                    resultDiv.innerHTML = "Your study spot is: Angela's Space!";
+                    resultDiv.innerHTML = "Your study spot is: <a href='https://marshall.ucsd.edu/res-life/residential-resources.html#Lounges' target='_blank'>Angela's Space</a>!";
                 } else if (question4Value === 'Muir') {
-                    resultDiv.innerHTML = "Your study spot is: Roots Restaurant!";
+                    resultDiv.innerHTML = "Your study spot is: <a href='https://hdh-web.ucsd.edu/dining/apps/diningservices/Restaurants/Venue_V3?locId=32&locDetID=15&dayNum=0' target='_blank'>Roots Restaurant</a>!";
                 } else if (question4Value === 'Warren') {
-                    resultDiv.innerHTML = "Your study spot is: Franklin Antonio Hall!";
+                    resultDiv.innerHTML = "Your study spot is: <a href='https://fah.ucsd.edu/' target='_blank'>Franklin Antonio Hall</a>!";
                 } else if (question4Value === 'Revelle') {
-                    resultDiv.innerHTML = "Your study spot is: Galbraith Hall!";
+                    resultDiv.innerHTML = "Your study spot is: <a href='https://theatre.ucsd.edu/facilities/galbraith-hall.html' target='_blank'>Galbraith Hall</a>!";
                 } else if (question4Value == null){
-                    resultDiv.innerHTML = "Your study spot is: Angela's Space!";
+                    resultDiv.innerHTML = "Your study spot is: <a href='https://marshall.ucsd.edu/res-life/residential-resources.html#Lounges' target='_blank'>Angela's Space</a>!";
                 }   
                 quizComplete = true;
             }
@@ -115,7 +116,7 @@
             const question7No = document.getElementById('chargingNo').checked;
 
             if(question7Yes) {
-                resultDiv.innerHTML = "Your study spot is: Franklin Antonio Hall!";
+                resultDiv.innerHTML = "Your study spot is: <a href='https://fah.ucsd.edu/' target='_blank'>Franklin Antonio Hall</a>!";
                 quizComplete = true;
                 document.getElementById('refreshButton').style.display = 'block';
             } else if (question7No) {
@@ -126,11 +127,11 @@
             const question8No = document.getElementById('aestheticNo').checked;
 
             if(question8Yes) {
-                resultDiv.innerHTML = "Your study spot is: Galbraith Hall!";
+                resultDiv.innerHTML = "Your study spot is: <a href='https://theatre.ucsd.edu/facilities/galbraith-hall.html' target='_blank'>Galbraith Hall</a>!";
                 quizComplete = true; 
                 document.getElementById('refreshButton').style.display = 'block';
             } else if (question8No) {
-                resultDiv.innerHTML = "Your study spot is: Angela's Space!";
+                resultDiv.innerHTML = "Your study spot is: <a href='https://marshall.ucsd.edu/res-life/residential-resources.html#Lounges' target='_blank'>Angela's Space</a>!";
                 quizComplete = true; 
                 document.getElementById('refreshButton').style.display = 'block';
             }
@@ -138,11 +139,11 @@
             const question9Yes = document.getElementById('caffeineYes').checked;
             const question9No = document.getElementById('caffeineNo').checked;
             if(question9Yes) {
-                resultDiv.innerHTML = "Your study spot is: M.O.M.'s Cafe!";
+                resultDiv.innerHTML = "Your study spot is: <a href='https://www.instagram.com/momscafeucsd/?hl=en' target='_blank'>M.O.M.'s Cafe!</a>";
                 quizComplete = true;
                 document.getElementById('refreshButton').style.display = 'block';
             } else if (question9No) {
-                resultDiv.innerHTML = "Your study spot is: Franklin Antonio Hall!";
+                resultDiv.innerHTML = "Your study spot is: <a href='https://fah.ucsd.edu/' target='_blank'>Franklin Antonio Hall</a>!";
                 quizComplete = true;
                 document.getElementById('refreshButton').style.display = 'block';
             }
@@ -225,7 +226,7 @@
     </div>
 
     <div id="result" class="sticky-note"></div>
-    <button onclick="location.reload();" style="display:none;" id="refreshButton">Refresh Quiz</button>
+    <button class="button refresh-button" onclick="location.reload();" style="display:none;" id="refreshButton">Refresh Quiz</button>
     </form>
     </section>
     </main>

@@ -5,7 +5,7 @@ body {
     position: relative;
     margin: 0;
     min-height: 100vh;
-    background: none; 
+    background-color: #2B1C24;
     font-family: 'Pirata One', cursive; 
 }
 
@@ -29,7 +29,7 @@ body {
     color: whitesmoke;
     font-family: 'Permanent Marker', cursive;
     margin-top: 0; /* Remove top margin */
-    margin-bottom: 20px; /* Add some space below the heading */
+    margin-bottom: 10px; /* Add some space below the heading */
 }
 
 body::before {
@@ -58,11 +58,11 @@ body::after {
 }
 
 .sticky-note {
-    border: 3px solid #800000; /* Dashed border */
+    border: 3px solid #800000;
     padding: 10px; /* Space inside the box */
     margin: 10px auto; /* Center the box and add space around it */
     width: 80%; /* Adjust the box width */
-    background-color: #daf5c4; /* Light background color */
+    background-color: #ffff99; /* Light background color */
     border-radius: 10px; /* Rounded corners */
     font-family: 'Tillana', cursive; /* Font style */
     position: relative; /* Needed for the pin pseudo-element */
@@ -77,9 +77,42 @@ body::after {
     transform: translateX(-50%);
     width: 30px; /* Adjust size as needed */
     height: 30px; /* Adjust size as needed */
-    /*background-image: url('pushpin.jpg'); Path to your pushpin image */
+    background-image: url('pushpin_2.png'); 
     background-size: cover;
     background-repeat: no-repeat;
 }
 
+.button {
+    font-family: 'Permanent Marker', cursive; /* Same font as headings */
+    font-size: 1em; /* Adjust font size as needed */
+    padding: 10px; /* Add padding for better appearance */
+    border: 3px solid #800000;  
+    border-radius: 10px;
+    background-color: #ffff99;
+    color: #2B1C24; /* Text color to contrast with the background */
+}
 
+.refresh-button {
+    font-family: 'Permanent Marker', cursive; /* Same font as headings */
+    font-size: 1em; /* Adjust font size as needed */
+    padding: 10px; /* Add padding for better appearance */
+    border: 3px solid #800000;  
+    border-radius: 10px;
+    background-color: #ffff99;
+    color: #2B1C24; /* Text color to contrast with the background */
+    margin: 20px auto; /* Add margin and center the button */
+}
+
+.disclaimer {
+    text-align: center;
+    font-size: 1em; /* Smaller font size */
+    font-family: 'Permanent Marker', cursive; /* Apply the Permanent Marker font */
+    color: #ed0808; 
+    margin: 0 auto 30px auto; /* Center the element and add space below */
+    background-color: white; /* White background color */
+    padding: 5px; /* Add padding inside the box */
+    border-radius: 10px; /* Rounded corners */
+    border: 2px solid #800000; /* Border color and thickness */
+    display: block; /* Ensure the box fits the content */
+    width: fit-content;
+}
