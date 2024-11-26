@@ -2,6 +2,12 @@
 /* Apply light blue background to the entire page */
 body {
     background-image: url('dininghall.avif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    height: 100%;
     
 }
 .food-title {
