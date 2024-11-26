@@ -4,19 +4,17 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title> Dining Hall Recommender </title>
+        <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap" rel="stylesheet">
         <link rel = "stylesheet" href = 'foodstyle.css'>
     </head>
     <body>
-        <h1 class = 'food-title'> Personalized Food Recommendations at UCSD </h1>
-        <p>Welcome to UCSD! Answer a few questions and get your favorite meal! </p>
-
-        <!-- Back Button to Return to the Main Page-->
         <button onclick = "window.location.href = 'index.html';"> Back to Home </button>
+        <h1 class = 'food-title'> Personalized Food Recommendations at UCSD </h1>
         <!-- Main content of the Quiz Page-->
-        <h2> Choose your preferences! </h2>
+        <h2 class = 'description'> Choose your preferences! </h2>
         <div id = "quiz">
             <div class = 'question'>
-                <label for = 'question1'> 1. What meal do you want? </label>
+                <label for = 'question1'> What meal do you want? </label>
                 <select id = 'question1'>
                     <option value = 'breakfast'> Breakfast</option>
                     <option value = 'lunch/dinner'> Lunch/Dinner </option>
@@ -25,7 +23,7 @@
             </div>
 
             <div class = 'question'>
-                <label for = 'question2'> 2. Will you use Dining Dollars or Triton Cash</label>
+                <label for = 'question2'> Will you use Dining Dollars or Triton Cash? </label>
                 <select id = 'question2'>
                     <option value = 'diningdollars'> Dining Dollars </option>
                     <option value = 'tritoncash'> Triton Cash</option>

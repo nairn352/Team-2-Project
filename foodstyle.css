@@ -1,22 +1,59 @@
-@import url('https://fonts.googleapis.com/css2?family=Pirata+One&display=swap');
 /* Apply light blue background to the entire page */
 body {
     background-image: url('actual_dininghall.jpg');
-    background-size: 100% 250%;
+    background-size: 100% 150%;
     background-repeat: no-repeat;
     height: 100%;
     
 }
 .food-title {
-    text-align: center;  /* Centers the text horizontally */
+    border: 3px solid rgba(243, 232, 232, 0.932);
+    background-color: rgba(243, 232, 232, 0.932);
+    margin: 20px auto;
+    border-radius: 100px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adds depth like a shadow */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex; /* Center content inside */
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    text-align: center; /* Centers text */
     text-align: top;
     margin-top: 0;       /* Removes default top margin */
-    padding-top: 20px;   /* Adds space at the top of the page */
     font-size: 3em;    /* Makes the title stand out */
     font-weight: bold;   /* Makes the title bold */
-    color: #eeac1f;         /* Sets the text color */
+    color: #1f26ee;         /* Sets the text color */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
-    position: relative;  /* Ensures proper positioning */
-    font-family: 'Pirata One', cursive; 
+    font-family: 'Dosis'; 
     letter-spacing: 7px;
+
+}
+
+.description{
+    text-align: center;
+    font-family: 'Dosis';
+
+}
+
+.question {
+    background-color: #f8f8f8; /* Light gray resembling porcelain */
+    border: 3px solid #ddd; /* Light border to give the plate effect */
+    border-radius: 50%; /* Makes the container circular like a plate */
+    width: 250px; /* Adjust the size of the plate */
+    height: 250px; /* Keep it circular */
+    display: flex; /* Center content inside */
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adds depth like a shadow */
+    margin: 20px auto; /* Centers the plate horizontally and adds spacing */
+    font-size: 1.5em; /* Adjusts text size */
+    text-align: center; /* Centers text */
+    color: #333; /* Dark text color for readability */
+    font-family: 'Dosis'; /* Clean, readable font */
+    font-weight: bold;
+    padding: 20px;
+
+
+
+
 }
