@@ -1,7 +1,7 @@
 /* Apply light blue background to the entire page */
 body {
     background-image: url('actual_dininghall.jpg');
-    background-size: 100% 150%;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     height: 100%;
     
@@ -37,7 +37,7 @@ body {
 
 .question {
     background-color: #f8f8f8; /* Light gray resembling porcelain */
-    border: 3px solid #ddd; /* Light border to give the plate effect */
+    border: 30px solid #ddd; /* Light border to give the plate effect */
     border-radius: 50%; /* Makes the container circular like a plate */
     width: 250px; /* Adjust the size of the plate */
     height: 250px; /* Keep it circular */
@@ -53,7 +53,54 @@ body {
     font-weight: bold;
     padding: 20px;
 
+}
+.treasure-box {
+    background-image: url('weekend-button.png');
+    background-size: cover;
+    width: 130px;
+    height: 115px;
+    cursor: pointer;
+    font-weight: bold; 
+    font-size: 16px; 
+    font-family: 'Dosis';
+    position: relative;
+    top: 150%; /* Moves image to 50% from the top */
+    left: 45%; /* Moves image to 50% from the left */
+    color: rgb(255, 255, 255);
+    text-shadow:
+    -1px -1px 0 black, /* Top-left */
+    1px -1px 0 black,  /* Top-right */
+    -1px 1px 0 black,  /* Bottom-left */
+    1px 1px 0 black;   /* Bottom-right */
+}
 
 
+/*/*.plate{
+    background-color: #f8f8f8; /* Light gray resembling porcelain */
+    /*border: 30px solid #ddd; /* Light border to give the plate effect */
+    /*border-radius: 50%; /* Makes the container circular like a plate */
+    /*width: 150px; /* Adjust the size of the plate */
+    /*height: 150px; /* Keep it circular */
+    /*display: flex; /* Center content inside */
+    /*align-items: center; /* Center content vertically */
+    /*justify-content: center; /* Center content horizontally */
+    /*box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adds depth like a shadow */
+    /*margin: 20px auto; /* Centers the plate horizontally and adds spacing */
+    /*font-size: 1.5em; /* Adjusts text size */
+    /*text-align: center; /* Centers text */
+    /*color: #333; /* Dark text color for readability */
+    /*font-family: 'Dosis'; /* Clean, readable font */
+    /*font-weight: bold;
+    padding: 20px;
+} */
+
+#result{
+    background-color: rgba(255, 0, 0, 0.575);
+    border-radius: 100px;
+    text-align: center;
+    font-family: 'Dosis';
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 20px;
 
 }
