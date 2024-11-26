@@ -1,12 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Pirata+One&display=swap');
 /* Apply light blue background to the entire page */
 body {
-    background-image: url('dininghall.avif');
+    background-image: url('actual_dininghall.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
-    margin: 0;
-    padding: 0;
     height: 100%;
     
 }
