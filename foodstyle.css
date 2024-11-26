@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Pirata+One&display=swap');
 /* Apply light blue background to the entire page */
 body {
-    background-color: rgb(150, 180, 240);
+    background-image: url('dininghall.avif');
+    
 }
 .food-title {
     text-align: center;  /* Centers the text horizontally */
