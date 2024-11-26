@@ -4,6 +4,7 @@ body {
     background-size: 100% 100%;
     background-repeat: no-repeat;
     height: 100%;
+
     
 }
 .food-title {
@@ -36,6 +37,7 @@ body {
 }
 
 .question {
+
     background-color: #f8f8f8; /* Light gray resembling porcelain */
     border: 30px solid #ddd; /* Light border to give the plate effect */
     border-radius: 50%; /* Makes the container circular like a plate */
@@ -52,6 +54,7 @@ body {
     font-family: 'Dosis'; /* Clean, readable font */
     font-weight: bold;
     padding: 20px;
+
 
 }
 .treasure-box {
@@ -75,24 +78,6 @@ body {
 }
 
 
-/*/*.plate{
-    background-color: #f8f8f8; /* Light gray resembling porcelain */
-    /*border: 30px solid #ddd; /* Light border to give the plate effect */
-    /*border-radius: 50%; /* Makes the container circular like a plate */
-    /*width: 150px; /* Adjust the size of the plate */
-    /*height: 150px; /* Keep it circular */
-    /*display: flex; /* Center content inside */
-    /*align-items: center; /* Center content vertically */
-    /*justify-content: center; /* Center content horizontally */
-    /*box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adds depth like a shadow */
-    /*margin: 20px auto; /* Centers the plate horizontally and adds spacing */
-    /*font-size: 1.5em; /* Adjusts text size */
-    /*text-align: center; /* Centers text */
-    /*color: #333; /* Dark text color for readability */
-    /*font-family: 'Dosis'; /* Clean, readable font */
-    /*font-weight: bold;
-    padding: 20px;
-} */
 
 #result{
     background-color: rgba(255, 0, 0, 0.575);
