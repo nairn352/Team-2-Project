@@ -59,60 +59,74 @@ body::after {
 
 .sticky-note {
     border: 3px solid #800000;
-    padding: 10px; /* Space inside the box */
-    margin: 10px auto; /* Center the box and add space around it */
-    width: 80%; /* Adjust the box width */
-    background-color: #ffff99; /* Light background color */
-    border-radius: 10px; /* Rounded corners */
-    font-family: 'Tillana', cursive; /* Font style */
-    position: relative; /* Needed for the pin pseudo-element */
-    transform: rotate(-2deg); /* Slight rotation for a realistic look */
+    padding: 10px; 
+    margin: 10px auto; 
+    width: 80%; 
+    background-color: #ffff99; 
+    border-radius: 10px; 
+    font-family: 'Tillana', cursive; 
+    position: relative; 
+    transform: rotate(-2deg);
+    overflow: visible;
 }
 
 .sticky-note::before {
     content: '';
     position: absolute;
-    top: -15px; /* Adjust position to place the pin on the top border */
+    top: -15px; 
     left: 50%;
     transform: translateX(-50%);
-    width: 30px; /* Adjust size as needed */
-    height: 30px; /* Adjust size as needed */
+    width: 30px; 
+    height: 30px; 
     background-image: url('pushpin_2.png'); 
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 .button {
-    font-family: 'Permanent Marker', cursive; /* Same font as headings */
-    font-size: 1em; /* Adjust font size as needed */
-    padding: 10px; /* Add padding for better appearance */
+    font-family: 'Permanent Marker', cursive; 
+    font-size: 1em; 
+    padding: 10px; 
     border: 3px solid #800000;  
     border-radius: 10px;
     background-color: #ffff99;
-    color: #2B1C24; /* Text color to contrast with the background */
+    color: #2B1C24; 
 }
 
 .refresh-button {
-    font-family: 'Permanent Marker', cursive; /* Same font as headings */
-    font-size: 1em; /* Adjust font size as needed */
-    padding: 10px; /* Add padding for better appearance */
+    font-family: 'Permanent Marker', cursive; 
+    font-size: 1em; 
+    padding: 10px; 
     border: 3px solid #800000;  
     border-radius: 10px;
     background-color: #ffff99;
-    color: #2B1C24; /* Text color to contrast with the background */
-    margin: 20px auto; /* Add margin and center the button */
+    color: #2B1C24;
+    margin: 20px auto; 
 }
 
 .disclaimer {
     text-align: center;
-    font-size: 1em; /* Smaller font size */
-    font-family: 'Permanent Marker', cursive; /* Apply the Permanent Marker font */
+    font-size: 1em; 
+    font-family: 'Permanent Marker', cursive; 
     color: #ed0808; 
-    margin: 0 auto 30px auto; /* Center the element and add space below */
-    background-color: white; /* White background color */
-    padding: 5px; /* Add padding inside the box */
-    border-radius: 10px; /* Rounded corners */
-    border: 2px solid #800000; /* Border color and thickness */
-    display: block; /* Ensure the box fits the content */
+    margin: 0 auto 30px auto; 
+    background-color: white; 
+    padding: 5px; 
+    border-radius: 10px; 
+    border: 2px solid #800000; 
+    display: block;
     width: fit-content;
+}
+
+.treasure-box {
+    position: absolute;
+    top: 5px; 
+    right: 15px; 
+    width: 40px; 
+    height: 35px; 
+    background-image: url('weekend-button.png'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: none; 
+    z-index: 1;
 }
