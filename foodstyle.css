@@ -2,7 +2,7 @@
 /* Apply light blue background to the entire page */
 body {
     background-image: url('actual_dininghall.jpg');
-    background-size: cover;
+    background-size: 100% 250%;
     background-repeat: no-repeat;
     height: 100%;
     
